@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CS GFA 4: TRIANGLE IDENTIFIER </title>
+</head>
+<body onload="Numberinput()">
+    <p> THANK YOU FOR USING MY TRIANGLE IDENTIFIER :O <p>
+    <script>
+        function Numberinput() {
+            var a = prompt("Enter the length of the First Side of the Triangle: ");
+            var b = prompt("Enter the length of the Second Side of the Triangle");
+            var c = prompt("Enter the length of the Third Side of the Triangle");
+
+            var a1 = isNaN(a)
+            var b1 = isNaN(b)
+            var c1 = isNaN(c)
+
+            if (a1 == true)
+            {
+                alert("You did not input a numerical value for the First Side of the Triangle, please refresh the program and disregard the result.");
+            }
+
+            if (b1 == true)
+            {
+                alert("You did not input a numerical value for the Second Side of the Triangle, please refresh the program and disregard the result.");
+            }
+
+            if (c1 == true)
+            {
+                alert("You did not input a numerical value for the Third Side of the Triangle, please refresh the program and disregard the result. ");
+            } 
+
+            alert(determineTriangle(a, b, c));
+        }
+
+        function determineTriangle(a, b, c) 
+        {
+            var Triangletype;
+            if (a == b && b == c)
+            {
+                Triangletype = "According to the values that you have inputted, your triangle is Equilateral!";
+            }
+            else if (a == b || b == c || c == a)
+            {
+                Triangletype = "According to the values that you have inputted, your triangle is Isoceles!";
+            } 
+            else
+            {
+                Triangletype = "According to the values that you have inputted, your triangle is Scalene!";
+            }
+
+            return (Triangletype);
+            
+        }
+    </script>
+</body>
+</html>
